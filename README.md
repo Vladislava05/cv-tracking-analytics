@@ -38,3 +38,5 @@ docker compose -f docker/docker-compose.yml up --build
 ---
 
 ![Demo](docs/result.png)
+![Demo](docs/analytics.png)
+![Demo](docs/out.mp4)
