@@ -1,0 +1,40 @@
+detector:
+  model_path: "yolov8n.pt"         
+  device: "cuda"                
+  conf_threshold: 0.3
+  iou_threshold: 0.5
+  classes: [0, 1, 2, 3, 5, 7]  
+  imgsz: 640
+  half: true                    
+
+tracker:
+  max_age: 30                   
+  min_hits: 3                  
+  iou_threshold: 0.3
+  high_thresh: 0.5             
+  low_thresh: 0.1               
+
+analytics:
+  line:
+  - start: [640, 100]
+    end:   [640, 700]
+    name: "vertical"
+  - start: [100, 400]
+    end:   [1180, 400]
+    name: "horizontal"
+  speed:
+    src_points: [[300, 500], [900, 500], [1100, 700], [100, 700]]
+    dst_points: [[0, 0], [10, 0], [10, 5], [0, 5]]
+  heatmap:
+    resolution: [64, 36]
+    decay: 0.99
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  redis_url: "redis://localhost:6379"
+  db_url: "postgresql://cv:cv@localhost:5432/cv"
+
+logging:
+  level: "INFO"
+  file: "logs/app.log"
