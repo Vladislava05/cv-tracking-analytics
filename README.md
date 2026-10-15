@@ -5,7 +5,7 @@ End-to-end система компьютерного зрения для тре�
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.1+-red)
 
-<video src="docs/demo.mp4" controls width="700"></video>
+<video src="docs/out.mp4" controls width="700"></video>
 
 ### Запуск пайплайна
 
@@ -39,4 +39,3 @@ docker compose -f docker/docker-compose.yml up --build
 
 ![Demo](docs/result.png)
 ![Demo](docs/analytics.png)
-![Demo](docs/out.mp4)
